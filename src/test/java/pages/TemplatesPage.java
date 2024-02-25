@@ -10,26 +10,23 @@ public class TemplatesPage extends AppPage {
 
 	public TemplatesPage(WebDriver driver) {
 		super(driver);
-
 	}
-	//-------------------------Elements-----------------------------------------------------------------
-	
+	// -------------------------Elements-----------------------------------------------------------------
+
 	@FindBy(css = ".text-sm.font-semibold")
 	private WebElement templatesNumLabel;
 	@FindBy(css = ".overflow-hidden.relative")
 	private List<WebElement> templatesBlocks;
-	@FindBy(css=".font-semibold>span:nth-child(1)")
+	@FindBy(css = ".font-semibold>span:nth-child(1)")
 	private WebElement titleLabel;
-	@FindBy(css="[data-intercom-target='template-filter-input']")
+	@FindBy(css = "[data-intercom-target='template-filter-input']")
 	private WebElement searchField;
-	@FindBy(css=".block.px-3")
+	@FindBy(css = ".block.px-3")
 	private WebElement searchBtn;
-	@FindBy(css="div:nth-child(2) > div > div.px-3")
+	@FindBy(css = "div:nth-child(2) > div > div.px-3")
 	private WebElement templateName;
-	
-	
-	//-------------------------Methods------------------------------------------------------------------
-	
+
+	// -------------------------Methods------------------------------------------------------------------
 
 	// Main Categoty
 	public void open_closeMainCategory(String name) {
@@ -45,6 +42,7 @@ public class TemplatesPage extends AppPage {
 		}
 
 	}
+
 	// Sub Category
 	public void chooseSubCategory(String name) {
 		waiting(2000);
@@ -59,61 +57,60 @@ public class TemplatesPage extends AppPage {
 		}
 
 	}
+
 	// Choose Template
-		public void chooseTemplate(String templateName) {
-			waiting(2000);
-			List<WebElement> areaList = driver.findElements(By.cssSelector(".overflow-hidden.relative"));
-			for (WebElement el : areaList) {
-				WebElement titleEl = el.findElement(By.cssSelector(".px-3.my-3"));
-				if (titleEl.getText().equalsIgnoreCase(templateName)) {
-					WebElement preview = el.findElement(By.cssSelector(".block.text-gray-600"));
-					click(preview);
-					break;
-				}
-
+	public void chooseTemplate(String templateName) {
+		waiting(2000);
+		List<WebElement> areaList = driver.findElements(By.cssSelector(".overflow-hidden.relative"));
+		for (WebElement el : areaList) {
+			WebElement titleEl = el.findElement(By.cssSelector(".px-3.my-3"));
+			if (titleEl.getText().equalsIgnoreCase(templateName)) {
+				WebElement preview = el.findElement(By.cssSelector(".block.text-gray-600"));
+				click(preview);
+				break;
 			}
 
 		}
-		
-	//-------------------------Validation---------------------------------------------------------------
-		
-		public int getTemplatesNumber() {
-			String s = getText(templatesNumLabel);
-			int i = Integer.parseInt(s);
-			return i;
+
+	}
+
+	// -------------------------Validation---------------------------------------------------------------
+
+	public int getTemplatesNumber() {
+		String s = getText(templatesNumLabel);
+		int i = Integer.parseInt(s);
+		return i;
+	}
+
+	public int getBlocksNumber() {
+		waiting(2000);
+		List<WebElement> elements = driver.findElements(By.cssSelector(".overflow-hidden.relative"));
+		int blocksCount = elements.size();
+		return blocksCount;
+
+	}
+
+	public boolean isTemplatesPage() {
+		if (getText(titleLabel).equalsIgnoreCase("Categories")) {
+			return true;
 		}
-		
-		public int getBlocksNumber() {
-			waiting(2000);
-			List<WebElement> elements = driver.findElements(By.cssSelector(".overflow-hidden.relative"));
-			int blocksCount = elements.size();
-			return blocksCount;
-					
-		}
-		
-		public boolean isTemplatesPage() {
-			if (getText(titleLabel).equalsIgnoreCase("Categories")) {
-				return true;	
-			}
-			return false;
-		}
-		
-		public void SearchTemplateByName(String text) {
-			waiting(2000);
-			fillText(searchField, text);
-	
-		}
-		
-		public String SearchField() {
-			waiting(2000);
-			return getText(searchField);
-		}
-		
-		public String getTemplatesName() {
-			waiting(2000);
-			return getText(templateName);
-			}
-		
-		
-		
+		return false;
+	}
+
+	public void SearchTemplateByName(String text) {
+		waiting(2000);
+		fillText(searchField, text);
+
+	}
+
+	public String SearchField() {
+		waiting(2000);
+		return getText(searchField);
+	}
+
+	public String getTemplatesName() {
+		waiting(2000);
+		return getText(templateName);
+	}
+
 }

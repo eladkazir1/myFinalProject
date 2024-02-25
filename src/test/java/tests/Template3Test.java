@@ -9,11 +9,6 @@ public class Template3Test extends AppTest {
 
 	@Test
 	public void tc01_template3() {
-
-//		// MainPage                           //(BaseTest3)כניסה מקוצרת על ידי הורשה מ
-//		MainPage mp = new MainPage(driver);
-//		mp.acceptCookies();
-
 		// MyWorkspacePage
 		MyWorkspacePage mwp = new MyWorkspacePage(driver);
 		mwp.closeFeedback();

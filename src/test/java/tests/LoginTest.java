@@ -7,7 +7,7 @@ import pages.MainPage;
 import pages.MyWorkspacePage;
 
 public class LoginTest extends BaseTest {
-	
+
 	@Test(description = "login with valid email & invalid password")
 	public void tc01_loginFailed() {
 		MainPage mp = new MainPage(driver);
@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
 		String expected = "These credentials do not match our records.";
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Test(description = "login with invalid email & valid password")
 	public void tc02_loginFailed() {
 		LoginPage lp = new LoginPage(driver);
@@ -28,7 +28,7 @@ public class LoginTest extends BaseTest {
 		String expected = "These credentials do not match our records.";
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Test(description = "login with invalid email & invalid password")
 	public void tc03_loginFailed() {
 		LoginPage lp = new LoginPage(driver);
@@ -37,7 +37,7 @@ public class LoginTest extends BaseTest {
 		String expected = "These credentials do not match our records.";
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Test(description = "login with valid email & valid password")
 	public void tc04_login() {
 		LoginPage lp = new LoginPage(driver);
@@ -46,6 +46,5 @@ public class LoginTest extends BaseTest {
 		mwp.closeBlackFridayPopup();
 		Assert.assertTrue(mwp.isProjectsPage());
 	}
-	
-}
 
+}

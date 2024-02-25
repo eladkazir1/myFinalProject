@@ -10,12 +10,10 @@ public class Template3EyewearQuizPage extends AppPage {
 
 	public Template3EyewearQuizPage(WebDriver driver) {
 		super(driver);
-
 	}
-
 	// -------------------------Methods------------------------------------------------------------------
-	
-	public void chooseGenderStyle(String name) {	
+
+	public void chooseGenderStyle(String name) {
 		waiting(2000);
 		List<WebElement> areaList = driver.findElements(By.cssSelector(".answer-behaviour"));
 		for (WebElement el : areaList) {
@@ -24,12 +22,12 @@ public class Template3EyewearQuizPage extends AppPage {
 				click(el);
 				break;
 			}
-			
+
 		}
 
 	}
-	
-	public void chooseFaceWidth(String name) {	
+
+	public void chooseFaceWidth(String name) {
 		waiting(2000);
 		List<WebElement> areaList = driver.findElements(By.cssSelector(".answer-behaviour"));
 		for (WebElement el : areaList) {
@@ -38,12 +36,12 @@ public class Template3EyewearQuizPage extends AppPage {
 				click(el);
 				break;
 			}
-			
+
 		}
 
 	}
-	
-	public void chooseShape(String name) {	
+
+	public void chooseShape(String name) {
 		waiting(2000);
 		List<WebElement> areaList = driver.findElements(By.cssSelector(".answer-behaviour"));
 		for (WebElement el : areaList) {
@@ -52,12 +50,12 @@ public class Template3EyewearQuizPage extends AppPage {
 				click(el);
 				break;
 			}
-			
+
 		}
 
 	}
-	
-	public void chooseColor(String name) {	
+
+	public void chooseColor(String name) {
 		waiting(2000);
 		List<WebElement> areaList = driver.findElements(By.cssSelector(".answer-behaviour"));
 		for (WebElement el : areaList) {
@@ -66,12 +64,12 @@ public class Template3EyewearQuizPage extends AppPage {
 				click(el);
 				break;
 			}
-			
+
 		}
 
 	}
-	
-	public void chooseMaterials(String name) {	
+
+	public void chooseMaterials(String name) {
 		waiting(2000);
 		List<WebElement> areaList = driver.findElements(By.cssSelector(".answer-behaviour"));
 		for (WebElement el : areaList) {
@@ -80,10 +78,9 @@ public class Template3EyewearQuizPage extends AppPage {
 				click(el);
 				break;
 			}
-			
+
 		}
 
 	}
-	
-	
+
 }

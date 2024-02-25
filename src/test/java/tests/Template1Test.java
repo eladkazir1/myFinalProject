@@ -10,11 +10,11 @@ public class Template1Test extends AppTest {
 
 	@Test
 	public void tc01_template1() {
-        //MyWorkspacePage
+		// MyWorkspacePage
 		MyWorkspacePage mwp = new MyWorkspacePage(driver);
 		mwp.closeFeedback();
 		mwp.templates();
-		//TemplatesPage
+		// TemplatesPage
 		TemplatesPage tp = new TemplatesPage(driver);
 		tp.chooseSubCategory("calculate price quotes");
 		tp.chooseTemplate("Custom Art Piece Order");

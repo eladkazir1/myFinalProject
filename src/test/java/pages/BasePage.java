@@ -78,11 +78,11 @@ public class BasePage {
 		// Move the mouse to the element
 		actions.moveToElement(el).build().perform();
 	}
-	
-//	public void scrollByAmount(WebElement el) {
-//		// Move the mouse to the element
-//		actions.scrollByAmount(horizontalOffset, verticalOffset).build().perform();
-//	}
+
+	// public void scrollByAmount(WebElement el) {
+	// // Move the mouse to the element
+	// actions.scrollByAmount(horizontalOffset, verticalOffset).build().perform();
+	// }
 
 	/*
 	 * Call this method with your element and a color like (red,green,orange etc...)

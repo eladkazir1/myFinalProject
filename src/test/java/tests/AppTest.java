@@ -5,7 +5,7 @@ import pages.LoginPage;
 import pages.MainPage;
 
 public class AppTest extends BaseTest {
-	
+
 	@BeforeClass
 	public void setupLogin() {
 		MainPage mp = new MainPage(driver);
@@ -13,8 +13,7 @@ public class AppTest extends BaseTest {
 		mp.chooseLogin();
 		LoginPage lp = new LoginPage(driver);
 		lp.login("eladkazir@gmail.com", "Yofita1988");
-		
+
 	}
 
 }
-
