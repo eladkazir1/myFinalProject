@@ -1,8 +1,5 @@
 # 💻 My Automation Project 
-✅ This is a testing automation demo project that tests a real site called: www.involve.me
-- [x] This example is for the automation college students only (`המכללה לאוטומציה`)
-
-![GitHub forks](https://img.shields.io/badge/Number%20Of%20Happy%20Students-1000+-blue) ⭐⭐⭐⭐⭐
+✅ This is my first automation project where tests are done on a real site called: www.involve.me
 
 ## 📖 Overview
 
