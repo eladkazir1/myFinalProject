@@ -41,23 +41,31 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/eladkazir1/myFinalProject.git
     ```
 
 ## 📁 Project Structure
 ```
 ├───.settings
-├───bin
-│   ├───pages
-│   └───tests
+├───ScreenShots
 ├───src
-│   ├───pages
-│   └───tests
+│   ├───main
+│   │   ├───java
+│   │   └───resources
+│   └───test
+│       ├───java
+│       │   ├───pages
+│       │   ├───tests
+│       │   └───utils
+│       └───resources
+│           └───data
 └───test-output
     ├───Default suite
     ├───junitreports
-    └───old
-        └───Default suite
+    ├───old
+    │   ├───Default suite
+    │   └───Suite
+    └───Suite
 ```
 
 Thanks for visiting my GitHub profile! 😊
