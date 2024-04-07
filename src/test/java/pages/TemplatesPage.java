@@ -42,7 +42,7 @@ public class TemplatesPage extends AppPage {
 		}
 
 	}
-
+	
 	// Sub Category
 	public void chooseSubCategory(String name) {
 		waiting(2000);
@@ -57,7 +57,7 @@ public class TemplatesPage extends AppPage {
 		}
 
 	}
-
+	
 	// Choose Template
 	public void chooseTemplate(String templateName) {
 		waiting(2000);

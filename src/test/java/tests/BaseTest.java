@@ -23,6 +23,8 @@ public class BaseTest {
 	@BeforeClass
 	public void setup() {
 		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().clearDriverCache().setup();
+		WebDriverManager.chromedriver().clearResolutionCache().setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("remote-allow-origins=*");
 		driver = new ChromeDriver(chromeOptions);
